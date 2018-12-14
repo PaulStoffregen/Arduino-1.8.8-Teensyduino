@@ -133,7 +133,7 @@ public class EditorLineStatus extends JComponent {
   }
 
   public void setSerialPort(String serialport) {
-    if (serialport.length() > 26) {
+    if (serialport != null && serialport.length() > 26) {
       int pos = serialport.lastIndexOf("usb");
       if (pos > 0) {
         serialport = serialport.substring(pos);
